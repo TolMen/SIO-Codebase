@@ -1,0 +1,28 @@
+/* ---------------------------- Body Color Styles ---------------------------- */
+
+/* Dégradé de fond animé pour le body */
+body {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 217, 0, 0.5),
+        rgba(218, 165, 32, 0.5)
+    );
+    background-size: 1000%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animation du dégradé */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    33% {
+        background-position: 100% 50%;
+    }
+    66% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}

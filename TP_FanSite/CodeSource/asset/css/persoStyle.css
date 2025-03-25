@@ -1,0 +1,85 @@
+/* ---------------------------- Section Styles ---------------------------- */
+
+/* Section générale */
+.section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+/* Conteneur des cartes de menu */
+.section .box .menu-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+/* Titre de la section */
+.section .box h2 {
+    color: #a57548;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+/* Paragraphe de la section */
+.section .box p {
+    color: #a57548;
+}
+
+/* Style des cartes */
+.section .box .menu-card .card {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border: 2px solid goldenrod;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: 1s;
+}
+
+/* Style de l'image dans la carte */
+.section .box .menu-card .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: 1s;
+}
+
+/* Style du nom dans la modal */
+#persoModalName {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+
+/* Style de la description dans la modal */
+#persoModalDescription {
+    font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    color: white;
+}
+
+/* Style de la modal */
+.gold-modal {
+    background-color: transparent;
+    border: 1px solid rgba(255, 215, 0, 0.7);
+    box-shadow: 0 0 100px rgb(0, 0, 0);
+    backdrop-filter: blur(15px);
+}
+
+/* ---------------------------- Responsivity ---------------------------- */
+
+/* Styles adaptatifs pour les écrans de moins de 450px */
+@media (max-width: 450px) {
+    /* Modification de l'alignement des cartes */
+    .section .box .menu-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}

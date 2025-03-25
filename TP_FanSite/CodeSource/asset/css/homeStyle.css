@@ -1,0 +1,146 @@
+/* ---------------------------- General Styles ---------------------------- */
+
+/* Style de base pour le corps de la page */
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: url("../img/disqueMaya.jpg") center / cover no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ---------------------------- Header Styles ---------------------------- */
+
+/* Section principale du site */
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 79vh;
+    margin: 0;
+    padding: 0;
+    z-index: 11;
+    overflow: hidden;
+}
+
+/* Conteneur de l'en-tête */
+main .top-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* Titre principal dans l'en-tête */
+main .top-page h1 {
+    font-size: 2.8em;
+    color: #eef1ef;
+    margin-top: 25px;
+    text-align: center;
+    text-shadow: #eef1ef;
+}
+
+/* Sous-titre de l'en-tête */
+main .top-page p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 15px;
+    color: #eef1ef;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ---------------------------- Choix Section Styles ---------------------------- */
+
+/* Conteneur principal de la section des cartes */
+.choix .boite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+/* Conteneur pour regrouper toutes les cartes */
+.choix .boite .boite-carte {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+/* Style des cartes */
+.choix .boite .boite-carte .carte {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    margin: 15px;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/* Numérotation des cartes (décoratif) */
+.choix .boite .boite-carte .carte span {
+    position: absolute;
+    top: -7px;
+    left: 7px;
+    font-size: 3em;
+    color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    font-weight: bold;
+}
+
+/* Titre de chaque carte */
+.choix .boite .boite-carte .carte h2 {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none;
+    color: #eef1ef;
+    transition: 0.5s;
+}
+
+/* Effet au survol des cartes */
+.choix .boite .boite-carte .carte:hover h2 {
+    color: #ffd700;
+}
+
+/* ---------------------------- Responsive Styles ---------------------------- */
+
+/* Styles adaptatifs pour les écrans plus petits (moins de 900px) */
+@media screen and (max-width: 900px) {
+    main .top-page h1 {
+        font-size: 1.5em;
+    }
+
+    main .top-page p {
+        font-size: 0.9em;
+    }
+}

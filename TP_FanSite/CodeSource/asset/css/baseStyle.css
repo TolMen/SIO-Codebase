@@ -1,0 +1,51 @@
+/* ---------------------------- Base CSS ---------------------------- */
+
+/* Import de la police Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+/* Réinitialisation des styles par défaut pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---------------------------- Navbar Styles ---------------------------- */
+
+/* Style de la barre de navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+/* Style de la marque du navbar */
+.navbar-brand {
+    color: #a57548;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: 1em;
+}
+
+/* Style du bouton de la navbar */
+.navbar-toggler {
+    color: transparent;
+    background-color: #fff;
+    padding: 2px 5px;
+}
+
+/* Style des éléments de navigation */
+.nav-item a {
+    color: #a57548;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+/* Effet au survol des liens dans la navbar */
+.nav-item:hover a,
+.navbar-brand:hover {
+    color: #a5754883;
+}

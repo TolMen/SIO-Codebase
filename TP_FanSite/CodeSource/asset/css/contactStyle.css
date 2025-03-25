@@ -1,0 +1,204 @@
+/* ---------------------------- General Styles ---------------------------- */
+
+/* Style de base pour le corps de la page */
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: url("../img/aztecCalendar.jpg") center / cover no-repeat;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+
+/* ---------------------------- Form Styles ---------------------------- */
+
+/* Conteneur du formulaire de contact */
+.formContact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    height: 78.8vh;
+    z-index: 1;
+}
+
+/* Boîte contenant le formulaire */
+.box {
+    position: relative;
+    width: 380px;
+    height: 580px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ---------------------------- Form ---------------------------- */
+
+/* Formulaire */
+.box form {
+    position: absolute;
+    inset: 4px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 215, 0, 0.7);
+    padding: 40px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Titre du formulaire */
+.box form .titleForm {
+    color: #eef1ef;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+/* ---------------------------- Input Fields ---------------------------- */
+
+/* Conteneur des champs de saisie */
+.box form .inputBox {
+    position: relative;
+    width: 280px;
+    margin-top: 35px;
+}
+
+/* Réinitialisation des marges */
+.box form .resetMargin {
+    margin-top: 0px;
+}
+
+/* Champ de saisie */
+.box form .inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #23242a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+/* Étiquette du champ de saisie */
+.box form .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #ffffff;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+/* Effet lorsque le champ est validé ou en focus */
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span {
+    color: #eef1ef;
+    font-size: 0.75em;
+    transform: translateY(-34px);
+}
+
+/* Ligne sous le champ de saisie */
+.box form .inputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #eef1ef;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+/* Effet de la ligne sous le champ validé ou en focus */
+.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i {
+    height: 44px;
+}
+
+/* Style pour les cases à cocher */
+.box form .inputBox input[type="checkbox"] {
+    width: auto;
+}
+
+/* Label associé aux cases à cocher */
+.box form .inputBox label {
+    font-size: 0.7em;
+    color: #eef1ef;
+}
+
+/* ---------------------------- Form Links ---------------------------- */
+
+/* Conteneur des liens du formulaire */
+.box form .links {
+    display: flex;
+    justify-content: end;
+}
+
+/* Style des liens */
+.box form .links a {
+    margin: 10px 10px;
+    font-size: 0.75em;
+    color: #eef1ef;
+    text-decoration: none;
+}
+
+/* ---------------------------- Form Button ---------------------------- */
+
+/* Style du bouton de soumission */
+.box form input[type="submit"] {
+    border: none;
+    outline: none;
+    padding: 9px 5px;
+    background: #eef1ef;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 125px;
+    margin-top: 10px;
+}
+
+/* Effet lors du clic sur le bouton */
+.box form input[type="submit"]:active {
+    opacity: 0.8;
+}
+
+/* ---------------------------- Responsive Styles ---------------------------- */
+
+/* Actif en dessous de 500px */
+@media screen and (max-width: 500px) {
+    .box form {
+        padding: 40px 25px;
+    }
+
+    .box form .inputBox input {
+        width: 90%;
+    }
+
+    .box form .inputBox i {
+        width: 90%;
+    }
+}
