@@ -1,0 +1,88 @@
+/* Style général pour le body et la page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f4f8;
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Style du carré contenant le texte et le bouton */
+.admin-box {
+    width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du titre principal */
+.admin-box h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #333;
+}
+
+/* Style du sous-titre pour le formulaire */
+.admin-box h2 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #444;
+}
+
+/* Style des champs du formulaire */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Style du bouton de déconnexion */
+.logout-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ff4d4d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #e60000;
+}
+
+/* Style du bouton de soumission */
+.submit-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
