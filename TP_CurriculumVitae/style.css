@@ -1,0 +1,365 @@
+/* ------------------------ NE PAS MODIFIER ------------------------ */
+
+html {
+    background-color: #eaeaea;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #eef1ef;
+}
+
+.page-container {
+    width: 793px;
+    height: 1122px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+/* ------------------------ NE PAS MODIFIER ------------------------ */
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.page-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #d639ce;
+    clip-path: circle(15% at 100% 0);
+}
+
+.page-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #901089;
+    clip-path: circle(8% at 5% 100%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+span {
+    font-family: "Press Start 2P", cursive;
+    color: #0e131f;
+}
+
+p,
+i,
+.nomXP {
+    font-family: "Poppins", sans-serif;
+    color: #0e131f;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Press+Start+2P&display=swap");
+
+/* ---------------------------------------------------------------------- */
+
+/* En-tête de page */
+
+header .top-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .top-page img {
+    width: 75px;
+    margin-left: 30px;
+}
+
+header .top-page h2 {
+    font-size: 2.8em;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.infoTop {
+    background-color: #e1e1f6;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 10px;
+    margin-bottom: 15px;
+    width: 75%;
+}
+
+.infoTop span {
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #0e131f;
+}
+
+.infoTop p {
+    font-size: 0.8em;
+    margin: 0;
+    line-height: 1.4;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+
+/* ---------------------------------------------------------------------- */
+
+.bigBox {
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.partie3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.partie3 .info {
+    font-size: 1.8em;
+    margin: 0;
+    padding-left: 15px;
+}
+
+.partie3 .infoPerso .listPerso {
+    display: flex;
+    margin: 7px 15px;
+    padding: 7px 20px;
+    background-color: #e1e1f6;
+    border-radius: 10px;
+}
+
+.partie3 .infoPerso .listPerso p {
+    margin: 0;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.partie3 .infoPerso {
+    position: relative;
+}
+
+.partie3 .infoPerso .decor span {
+    content: "";
+    border: #a4a4f8 1px solid;
+    transform: rotate(270deg);
+    position: absolute;
+    width: 200px;
+    top: 98px;
+    left: -65px;
+}
+
+.partie3 .infoPerso .decor i {
+    content: "";
+    width: 15px;
+    height: 15px;
+    left: 27px;
+    top: 16px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #a4a4f8;
+}
+
+.partie3 .infoPerso .decor i:nth-child(2) {
+    top: 54px;
+}
+
+.partie3 .infoPerso .decor i:nth-child(3) {
+    top: 91px;
+}
+
+.partie3 .infoPerso .decor i:nth-child(4) {
+    top: 129px;
+}
+
+.partie3 .infoPerso .decor i:nth-child(5) {
+    top: 168px;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.partie4 {
+    margin-left: 20px;
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.partie4 .competences,
+.partie4 .loisir {
+    font-size: 1.8em;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-right: 145px;
+}
+
+.partie4 .loisir {
+    margin-right: 75px;
+}
+
+.partie4 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 320px;
+    height: 165px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.partie4 .card1 {
+    height: 295px;
+}
+
+.partie4 .competences:after,
+.partie4 .competences:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.partie4 .competences:after {
+    top: 80px;
+    left: -60px;
+    background: #ee77e8;
+    clip-path: circle(3% at 50% 50%);
+}
+
+.partie4 .competences:before {
+    top: 255px;
+    left: -372px;
+    background: #ee77e8;
+    clip-path: circle(2% at 50% 50%);
+}
+
+.partie4 .card span {
+    text-align: center;
+    pointer-events: none;
+    margin: 3px 0;
+}
+
+.partie4 .card .trait {
+    margin: -5px;
+    color: grey;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.partie1,
+.partie2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.xp {
+    font-size: 1.8em;
+    margin: 0;
+    padding-right: 165px;
+}
+
+.formation {
+    font-size: 1.8em;
+    margin: 0;
+    padding-top: 15px;
+    padding-right: 205px;
+}
+
+.partie1 .nomXP,
+.partie2.nomFormation {
+    display: flex;
+    flex-direction: column;
+}
+
+.partie1 .nomXP {
+    position: relative;
+}
+
+.partie1 .nomXP span {
+    content: "";
+    border: #a4a4f8 1px solid;
+    transform: rotate(270deg);
+    position: absolute;
+    width: 410px;
+    top: 200px;
+    left: -108px;
+}
+
+.partie1 .nomXP .infoXP {
+    margin: 5px 0;
+    padding: 10px 20px;
+    background-color: #e1e1f6;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.partie1 .nomXP .infoXP p:nth-child(1) {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.partie1 .nomXP .infoXP p:nth-child(3) {
+    margin: 0;
+    margin-top: 2.5px;
+}
+
+.partie2 .nomFormation .paraF {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #e1e1f6;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.partie2 .nomFormation .paraF:nth-child(1) {
+    margin-top: 5px;
+}
+
+.partie2 .nomFormation .paraF i,
+.partie1 .nomXP .infoXP i,
+.partie1 .nomXP .infoXP p:nth-child(3) {
+    font-weight: bold;
+    font-size: 0.9em;
+    color: rgba(0, 0, 0, 0.75);
+}
+
+.partie2 .nomFormation .paraF p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+@media print {
+    .partie4 .competences:after {
+        top: 160px;
+    }
+
+    .partie4 .competences:before {
+        top: 464px;
+    }
+}
