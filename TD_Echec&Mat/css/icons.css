@@ -1,0 +1,29 @@
+.icon {
+    mask-size: cover;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-color: #000000;
+    margin-top: -0.125em;
+    vertical-align: middle;
+}
+
+.icon-edit {
+    mask-image: url("../images/edit.svg");
+}
+
+.icon-delete {
+    mask-image: url("../images/delete.svg");
+}
+
+.icon-add {
+    mask-image: url("../images/add.svg");
+}
+
+.icon-ok {
+    mask-image: url("../images/ok.svg");
+}
+
+.icon-user {
+    mask-image: url("../images/user.svg");
+}
