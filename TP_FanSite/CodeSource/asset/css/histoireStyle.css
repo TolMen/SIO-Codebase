@@ -1,0 +1,167 @@
+/* ---------------------------- General Styles ---------------------------- */
+
+/* Empêche le défilement horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* ---------------------------- Timeline Styles ---------------------------- */
+
+/* Conteneur principal */
+.timeline {
+    position: relative;
+}
+
+/* Style de l'en-tête */
+header {
+    text-align: center;
+}
+
+/* Titre dans l'en-tête */
+header h2 {
+    color: #a57548;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+/* Image : Carte */
+header img {
+    max-width: 100%;
+    margin-bottom: 25px;
+}
+
+/* Ligne centrale */
+.timeline::before {
+    content: "";
+    background: rgba(218, 165, 32, 0.7);
+    width: 5px;
+    height: 99%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Élément de la timeline */
+.timeline-item {
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+/* Déplace à droite le contenu des éléments pairs */
+.timeline-item:nth-child(even) .timeline-content {
+    float: right;
+}
+
+/* Triangle décoratif pour les éléments pairs */
+.timeline-item:nth-child(even) .timeline-content::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    left: -15px;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent goldenrod transparent transparent;
+}
+
+/* Nettoyage des flottants */
+.timeline-item::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Contenu des éléments */
+.timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 10px 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border: 2px solid goldenrod;
+}
+
+/* Triangle décoratif */
+.timeline-content::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 30px;
+    right: -15px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent goldenrod;
+}
+
+/* Style des boules */
+.boule {
+    width: 30px;
+    height: 30px;
+    background: goldenrod;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    margin-top: 25px;
+    margin-left: -15px;
+}
+
+/* Style des paragraphes */
+.timeline .timeline-item .timeline-content p {
+    margin: 0;
+    padding: 0;
+    color: #a57548;
+    font-size: 0.9em;
+}
+
+/* Style des titres */
+.timeline .timeline-item .timeline-content h2 {
+    color: #a57548;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* ---------------------------- Responsive Styles ---------------------------- */
+
+/* Styles adaptatifs pour les écrans plus petits (moins de 768px) */
+@media screen and (max-width: 768px) {
+    /* Modifie la position de la ligne centrale */
+    .timeline::before {
+        left: 50px;
+    }
+
+    /* Ajuste la position de la boule */
+    .timeline .boule {
+        left: 50px;
+    }
+
+    /* Ajuste les cartes de la timeline */
+    .timeline .timeline-content {
+        max-width: 100%;
+        width: auto;
+        margin-left: 70px;
+    }
+
+    /* Retire le flottement des éléments pairs */
+    .timeline .timeline-item:nth-child(even) .timeline-content {
+        float: none;
+    }
+
+    /* Triangle décoratif pour les éléments impairs */
+    .timeline .timeline-item:nth-child(odd) .timeline-content::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 30px;
+        left: -15px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent goldenrod transparent transparent;
+    }
+}
