@@ -1,0 +1,3 @@
+artifactId=tp_qcm
+groupId=com.sio
+version=1.0
